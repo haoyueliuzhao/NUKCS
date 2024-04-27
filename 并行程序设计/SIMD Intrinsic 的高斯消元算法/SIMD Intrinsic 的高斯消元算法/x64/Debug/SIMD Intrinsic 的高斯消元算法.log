@@ -1,0 +1,12 @@
+﻿  源.cpp
+D:\Study\Parallel programming\project\SIMD Intrinsic 的高斯消元算法\SIMD Intrinsic 的高斯消元算法\源.cpp(33,21): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\Study\Parallel programming\project\SIMD Intrinsic 的高斯消元算法\SIMD Intrinsic 的高斯消元算法\源.cpp(110,38): warning C4244: “参数”: 从“_Rep”转换到“_Ty”，可能丢失数据
+          with
+          [
+              _Rep=__int64
+          ]
+          and
+          [
+              _Ty=int
+          ]
+  SIMD Intrinsic 的高斯消元算法.vcxproj -> D:\Study\Parallel programming\project\SIMD Intrinsic 的高斯消元算法\x64\Debug\SIMD Intrinsic 的高斯消元算法.exe
