@@ -1,0 +1,12 @@
+﻿  源.cpp
+D:\Study\Parallel programming\project\普通高斯消元循环展开\普通高斯消元循环展开\源.cpp(33,21): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\Study\Parallel programming\project\普通高斯消元循环展开\普通高斯消元循环展开\源.cpp(102,38): warning C4244: “参数”: 从“_Rep”转换到“_Ty”，可能丢失数据
+          with
+          [
+              _Rep=__int64
+          ]
+          and
+          [
+              _Ty=int
+          ]
+  普通高斯消元循环展开.vcxproj -> D:\Study\Parallel programming\project\普通高斯消元循环展开\x64\Debug\普通高斯消元循环展开.exe
