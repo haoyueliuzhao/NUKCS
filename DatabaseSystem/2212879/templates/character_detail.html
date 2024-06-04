@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ character.name }} Detail</title>
+</head>
+<body>
+    <h1>{{ character.name }} Detail</h1>
+    <p>Role: {{ character.role }}</p>
+    <p>Synopsis: {{ character.Character_synopsis }}</p>
+    <p>Voice Actor:<a href="{{ url_for('voice_actor_detail', voice_actor_id=character.voice_actor_id) }}">{{ voice_actor_name }}</a> </p>
+</body>
+<button onclick="history.back()">Go Back</button>
+</html>

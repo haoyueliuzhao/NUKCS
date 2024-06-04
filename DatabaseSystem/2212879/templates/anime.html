@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ anime.title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>{{ anime.title }}</h1>
+    <p>Synopsis:{{ anime.synopsis }}</p>
+    <p>Genre: {{ anime.genre }}</p>
+    <p>Release Date: {{ anime.release_date }}</p>
+    <p>Episodes: {{ anime.episodes }}</p>
+    <p>Status: {{ anime.status }}</p>
+    <p>Rating: {{ anime.rating }}</p>
+    <img src="{{ url_for('static', filename='image/' ~ anime.cover_image) }}" alt="{{ anime.title }} image" style="max-width: 10%; height: auto;">
+
+    <h2>Studio:</h2>
+    <li><a href="{{ url_for('studio_detail', studio_id=studio.studio_id) }}">{{ studio.name }}</a></li>
+
+    <h2>Characters:</h2>
+    <ul>
+        {% for character in characters %}
+            <li><a href="{{ url_for('character_detail', character_id=character.character_id) }}">{{ character.name }}</a></li>
+        {% endfor %}
+    </ul>
+
+    <h2>Voice Actors:</h2>
+    <ul>
+        {% for voice_actor in voice_actors %}
+            <li><a href="{{ url_for('voice_actor_detail', voice_actor_id=voice_actor.voice_actor_id) }}">{{ voice_actor.name }}</a></li>
+        {% endfor %}
+    </ul>
+    {% if is_favorite %}
+        <p>This anime is in your favorites.</p>
+        <a href="{{ url_for('favorite', anime_id=anime.anime_id) }}">Remove from Favorites</a>
+    {% else %}
+        <a href="{{ url_for('favorite', anime_id=anime.anime_id) }}">Add to Favorites</a>
+    {% endif %}
+
+    <h2>Reviews</h2>
+    <ul>
+        {% for review in reviews %}
+        <li>{{ review.comment }} - {{ review.rating }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('review', anime_id=anime.anime_id) }}">Add Review</a>
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+<button onclick="history.back()">Go Back</button>
+</html>

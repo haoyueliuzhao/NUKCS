@@ -1,0 +1,14 @@
+/* static/css/style.css */
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #333;
+}
+
+img {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+}

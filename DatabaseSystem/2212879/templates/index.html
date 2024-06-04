@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+</head>
+<body>
+    <h1>Welcome to Main Page</h1>
+    
+    {% if 'user_id' not in session %}
+    <a href="{{ url_for('register') }}">Register</a>
+    <br>
+    <a href="{{ url_for('login') }}">Login</a>
+    {% else %}
+    <a href="{{ url_for('logout') }}">Logout</a>
+    <br>
+    <a href="{{ url_for('user_home') }}">View User Info</a>
+    <br>
+    <a href="{{ url_for('anime_list') }}">View Anime Info</a>
+    {% endif %}
+</body>
+</html>

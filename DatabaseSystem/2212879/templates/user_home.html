@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Home</title>
+</head>
+<body>
+    <h1>Welcome to User Home Page</h1>
+    
+    {% if user %}
+    <h2>User Information</h2>
+    <p>Username: {{ user.username }}</p>
+    <a href="{{ url_for('change_username') }}">Change Username</a>
+    <p>Email: {{ user.email }}</p>
+    <a href="{{ url_for('change_email') }}">Change Email</a>
+    {% endif %}
+
+    {% if user.favorites %}
+    <h2>Favorites</h2>
+    <ul>
+        {% for favorite in user.favorites %}
+        
+            {% for anime_t in anime %}
+                {% if anime_t and anime_t.anime_id == favorite.anime_id %}
+                <li><a href="{{ url_for('anime_detail', anime_id=favorite.anime_id) }}">{{ favorite.anime_id }}-{{ anime_t.title }}</a></li>
+                
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No favorites yet.</p>
+    {% endif %}
+
+    {% if reviews %}
+    <h2>Reviews</h2>
+    <ul>
+        {% for review in reviews %}
+        <li><a href="{{ url_for('anime_detail', anime_id=review.anime_id) }}">{{ review.anime_id }}</a> - Rating: {{ review.rating }} - Comment:{{ review.comment }} - Created_at:{{ review.created_at }}
+            <form method="POST" action="{{ url_for('delete_review', review_id=review.review_id) }}">
+                <button type="submit">Delete</button>
+            </form>
+
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No reviews yet.</p>
+    {% endif %}
+
+    <a href="{{ url_for('logout') }}">Logout</a>
+
+    <br>
+    <a href="{{ url_for('index') }}">Back to Main Page</a>
+</body>
+<form method="POST" action="{{ url_for('delete_user') }}">
+    <button type="submit">Delete Account</button>
+</form>
+</html>

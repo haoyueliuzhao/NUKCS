@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Search Results</h1>
+    <p>Showing results for: {{ search_query }}</p>
+    {% if animes %}
+    <ul>
+        {% for anime in animes %}
+        <li>
+            <a href="{{ url_for('anime_detail', anime_id=anime.anime_id) }}">{{ anime.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No Results.</p>
+    {% endif %}
+</body>
+<form action="{{ url_for('anime_list') }}" method="GET">
+    <button type="submit">Go Back</button>
+</form>
+
+</html>

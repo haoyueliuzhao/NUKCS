@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Detail</title>
+</head>
+<body>
+    <h1>Studio Detail</h1>
+    
+    {% if studio %}
+    <h2>{{ studio.name }}</h2>
+    <p><strong>Synopsis:</strong> {{ studio.studio_synopsis }}</p>
+    <p><strong>Founded Date:</strong> {{ studio.founded_date }}</p>
+    <p><strong>Country:</strong> {{ studio.country }}</p>
+    {% else %}
+    <p>Studio not found.</p>
+    {% endif %}
+    <button onclick="history.back()">Go Back</button>
+</body>
+
+</html>
