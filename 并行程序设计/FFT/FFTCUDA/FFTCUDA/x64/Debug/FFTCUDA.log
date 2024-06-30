@@ -1,0 +1,15 @@
+﻿  Compiling CUDA source file kernel.cu...
+  
+  D:\Study\Parallel programming\project\FFTCUDA\FFTCUDA>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.5\bin\nvcc.exe" -gencode=arch=compute_52,code=\"sm_52,compute_52\" --use-local-env -ccbin "D:\Program Files\Microsoft Visual Studio\VC\Tools\MSVC\14.35.32215\bin\HostX64\x64" -x cu   -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.5\include" -I"D:\Program Files\Git\vcpkg\installed\x64-windows\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.5\include"  -G   --keep-dir x64\Debug  -maxrregcount=0   --machine 64 --compile -cudart static  -g  -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /FS /Zi /RTC1 /MDd " -Xcompiler "/Fdx64\Debug\vc143.pdb" -o "D:\Study\Parallel programming\project\FFTCUDA\FFTCUDA\x64\Debug\kernel.cu.obj" "D:\Study\Parallel programming\project\FFTCUDA\FFTCUDA\kernel.cu" 
+D:\Study\Parallel programming\project\FFTCUDA\FFTCUDA\kernel.cu(45): warning #177-D: variable "initialSize" was declared but never referenced
+        const int initialSize = 128;
+                  ^
+  
+  Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+  
+  kernel.cu
+  tmpxft_00058a8c_00000000-7_kernel.cudafe1.cpp
+D:\Study\Parallel programming\project\FFTCUDA\FFTCUDA\kernel.cu(65): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+  FFTCUDA.vcxproj -> D:\Study\Parallel programming\project\FFTCUDA\x64\Debug\FFTCUDA.exe
+  'pwsh.exe' 不是内部或外部命令，也不是可运行的程序
+  或批处理文件。

@@ -1,0 +1,1 @@
+D:\Study\Parallel programming\project\FFT_P\FFT_P\x64\Debug\FFT_P.vcxproj.CopyComplete

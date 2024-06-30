@@ -1,0 +1,5 @@
+﻿  fft.cpp
+D:\Study\Parallel programming\project\FFT\FFT\fft.cpp(93,23): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+  FFT.vcxproj -> D:\Study\Parallel programming\project\FFT\x64\Debug\FFT.exe
+  'pwsh.exe' 不是内部或外部命令，也不是可运行的程序
+  或批处理文件。
